@@ -13,7 +13,7 @@ function Header() {
 						BLOG
 					</div>
 				</a>
-				<div className="justify-center flex  items-center pl-[18%] ">
+				<div className="md:justify-center flex  md:items-center md:pl-[18%]  sm:hidden">
 					<input
 						type="text "
 						placeholder="Search"

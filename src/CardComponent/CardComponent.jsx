@@ -1,18 +1,20 @@
 import { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
 
 const CardComponent = () => {
 	const [photos, setPhotos] = useState([])
+
 	useEffect(() => {
 		fetch("http://localhost:1337/api/blog-posts?populate=*")
-			.then((res) => {
-				return res.json()
-			})
+			.then((res) => res.json())
 			.then((data) => {
 				console.log(data.data)
 				setPhotos(data.data)
 			})
 	}, [])
+
 	console.log(photos)
+
 	return (
 		<div>
 			<section className="text-gray-600 body-font">
@@ -23,9 +25,7 @@ const CardComponent = () => {
 								<div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
 									<img
 										className="lg:h-48 md:h-36 w-full object-cover object-center"
-										src={
-											"http://localhost:1337${photo.attributes.CoverImage.data.attributes.url}"
-										}
+										src={`http://localhost:1337${photo.attributes.CoverImage.data.attributes.url}`}
 										alt="content"
 									/>
 									<div className="p-6">
@@ -38,10 +38,13 @@ const CardComponent = () => {
 										<p className="leading-relaxed mb-3">
 											{photo.attributes.Content[0].children[0].text}
 										</p>
-										<div className="flex items-center flex-wrap ">
-											<a className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">
+										<div className="flex items-center flex-wrap">
+											<Link
+												to={`/blog/${photo.attributes.Slug}`}
+												className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0"
+											>
 												Learn More
-											</a>
+											</Link>
 										</div>
 									</div>
 								</div>

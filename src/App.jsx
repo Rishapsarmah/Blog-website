@@ -6,6 +6,7 @@ import HeroJs from "./Hero-js/HeroJs"
 import Header from "./Header/Header"
 import Footer from "./Footer/Footer"
 import BlogPage from "./BlogPage"
+// import BlogPage from "./BlogPage"
 
 function App() {
 	return (
@@ -15,11 +16,8 @@ function App() {
 				<Routes>
 					<Route path="/" element={<HeroJs />} />
 					<Route path="/about" element={<About />} />
-					<Switch>
-						<Route path="/blog/:slug">
-							<BlogPage />
-						</Route>
-					</Switch>
+
+					<Route path="/blog/:slug" element={<BlogPage />} />
 				</Routes>
 				<Footer />
 			</BrowserRouter>
