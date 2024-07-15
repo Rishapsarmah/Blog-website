@@ -17,11 +17,17 @@ const CardComponent = () => {
 
 	return (
 		<div>
-			<section className="text-gray-600 body-font">
-				<div className="container px-5 py-24 mx-auto">
-					<div className="flex flex-wrap -m-4">
+			<section className="text-gray-600 body-font pl-[2rem] ">
+				<div className="container px-5 py-24 mx-auto md:pr-[4.25rem]">
+					<div
+						className="md:flex md:flex-wrap md:-m-4 md:w-[auto] md:pl-[2rem] flex flex-wrap -m-4 pl-[0rem]
+					w-[45rem] p-[3 rem] "
+					>
 						{photos.map((photo) => (
-							<div key={photo.id} className="p-4 md:w-1/3 shadow-2xl">
+							<div
+								key={photo.id}
+								className="p-4 lg:w-1/3 shadow-2xl md:w-1/2"
+							>
 								<div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
 									<img
 										className="lg:h-48 md:h-36 w-full object-cover object-center"

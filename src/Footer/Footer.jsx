@@ -4,7 +4,7 @@ function Footer() {
 	return (
 		<footer
 			container
-			className="border border-t-8 border-teal-500 mt-[8rem] flex h-[18rem]"
+			className="border border-t-8 border-teal-500 mt-[8rem] flex h-[300px] w-[800px] md:w-[auto]"
 		>
 			<div className="w-full max-w-5xl mx-auto">
 				<div className="grid w-full justify-between sm:flex md:grid-cols-1">
@@ -21,7 +21,7 @@ function Footer() {
 					</div>
 				</div>
 			</div>
-			<div className="flex mt-[4rem] pr-8  gap-6">
+			<div className="flex mt-[4rem] pr-8  gap-6 md:mr-[5rem]">
 				<div className="grid">
 					<div>
 						<a href="">ABOUT</a>

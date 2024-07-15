@@ -2,12 +2,12 @@ import React from "react"
 function About() {
 	return (
 		<>
-			<div className="border-b-8  border-black w-[80%]  ml-[10%] pt-20"></div>
-			<div className="flex justify-center text-[10rem] font-bold">
+			<div className="border-b-8  border-black w-[600px] ml-[6rem] md:w-[80%]  md:ml-[10%] pt-20 sm:ml-[-214px]"></div>
+			<div className="flex justify-center text-[10rem] font-bold md:pl-[inherit] pl-[410px] sm ">
 				<h1>About </h1>
 			</div>
-			<div className="border-b-8  border-black w-[80%]  ml-[10%] "></div>
-			<div className="min-h-screen flex items-center justify-center">
+			<div className="border-b-8  border-black w-[600px] ml-[6rem] md:w-[80%]  md:ml-[10%]  "></div>
+			<div className="min-h-screen flex items-center justify-center md:w-[auto]   w-[max-content] ml-[4.5rem]">
 				<div className="text-center max-w-2xl">
 					<div></div>
 					<p>
